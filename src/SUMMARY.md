@@ -7,6 +7,7 @@
 - [IM 群組聊天機器人](im-bot/README.md)
   - [API 查詢](im-bot/api.md)
   - [查詢帳戶跨平台聯繫](im-bot/account.md)
+  - [群組設置](im-bot/group_settings.md)
   - [聊天記錄搜索](im-bot/chat_history.md)
   - [貼圖搜索](im-bot/sticker_seacrh.md)
   - [發送隨機貼圖](im-bot/random_sticker.md)
