@@ -3,10 +3,13 @@
 
 本機器人目前支援（或計劃支援）的功能如下，讀者可點擊下表之連結以查看該功能的詳細說明。請注意有部份功能可能會在一部份群組被禁用。
 
+- [配置指南](installation.md)
 - [API 查詢](api.md)
 - [查詢帳戶跨平台聯繫](account.md)
+- [群組設置](group_settings.md)
+- [群組驗證機制](group_auth.md)
 - [聊天記錄搜索](chat_history.md)
-- [DM 轉發](#DM-轉發)
+- [DM 轉發](#dm-轉發)
 - [貼圖搜索](sticker_seacrh.md)
 - [發送隨機貼圖](random_sticker.md)
 - [`/spam` 指令](spam.md)
