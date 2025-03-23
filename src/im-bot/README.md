@@ -80,11 +80,11 @@
     "debug_commands": true,
     "throw_error": true
   },
-  "bot_log_file": "bot.log",
+  "language_list": ["en", "zh-TW", "zh-CN"],
   "chat_history_directory": "history",
   "account_info_file": "users.json",
   "group_info_file": "groups.json",
-  "sticker_file": ".json",
+  "sticker_file": "stickers.json",
   "sticker_index_file": "stdb.json",
   "spam_config_file": "spam_config.json",
   "emoji_dict_file": "emoji_dict.json",
