@@ -23,9 +23,9 @@
 - ||可能還有一些隱藏的除錯指令||
 
 ## 指令列表
-- `general` 類：`/start`, `/help`
+- `general` 類：`/start`, `/help`, `/id`
 - `ping` 類：`/ping`
-- `chat_history` 類：`/search`
+- `chat_history` 類：`/search` (`/\grep`)
 - `pin` 類：`/pin`
 - `checkuser` 類：`/checkuser`
 - `random_sticker` 類：`/sticker`, `/sticker_stat`
@@ -38,6 +38,8 @@
 - `xq` 類：待定<!-- `/createxq`, `/joinxq`, `nextxq`, `/passxq`, `/undoxq`, `/resendxq`, `/hurry_upxq`, `/abandonxq` -->
 - `raven` 類：`/pinyin`, `/pinyindc`, `/zhuyindc`
 - `debug_commands` 類：`/echo`, `/getfileid`, `/flag`, `/sendtext`, `/sendsticker`, `/forward`, `/forward2`
+
+`/id`、`/checkuser` 和所有屬於 `debug_commands` 類別的指令均需要進階白名單權限才可執行。
 
 ## `/start` 指令
 目前只支持對 `/start` 指令回應固定字串信息。訊息內容可在 `config.json` 文件中定義。
@@ -80,6 +82,7 @@
     "debug_commands": true,
     "throw_error": true
   },
+  "whitelist_enabled": true,
   "language_list": ["en", "zh-TW", "zh-CN"],
   "chat_history_directory": "history",
   "account_info_file": "users.json",
@@ -95,7 +98,10 @@
     "In order to make users feel better, debug commands are neither registered on Telegram nor show here.",
     "/start 內置起動按鈕。\n/help 輸出幫助。\n/echo 重複信息。\n/flag 輸入國家地區代碼，輸出旗幟，稍後將實作自動修正功能。\n/sendtext 發送文字信息，目前只支持純文字。\n/sendsticker 發送貼圖。 \n/forward 轉發信息。\n/forward2 轉發信息，命令格式跟 forward 有點不同。\n/pinyin 輸出漢語拼音，注意多音字可能無法正確判斷。\n/pinyindc 拼音解碼。（使用本機器人取得編碼）\n/zhuyindc 注音輸入法解碼。\n本機器人有隱藏指令，請慎用。\n"
   ],
-  "emoji_dict_template": "${emoji}\n*U\\+${codepoint} “${name}”*\nShortcode: ${shortcode}\n\n${description}"
+  "emoji_dict_template": "${emoji}\n*U\\\\+${codepoint} “${name}”*\nShortcode: ${shortcode}\n\n${description}",
+  "strict_whitelist_telegram": [1, 2, 3],
+  "strict_whitelist_discord": [1, 2, 3],
+  "strict_whitelist_telegram": ["@mod1:ltgc.cc","@mod2:ltgc.cc"]
 }
 ```
 
@@ -104,5 +110,13 @@
 
 ### 單平台
 #### Telegram
+使機器人手動發送 Telegram 訊息，可用以下 Telegram 機器人指令（需要進階白名單）：
+```
+/sendtext <target> <text>
+/sendsticker <target> <sticker_id>
+/forward <src_chat_id> <msg_id>
+/forward2 <target_chat_id>
+```
+
 #### Discord
 #### Matrix
