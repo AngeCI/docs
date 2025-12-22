@@ -3,6 +3,8 @@
 [Home](README.md)
 
 # Projects
+- [Boardgames](boardgame/README.md)
+- [Map viewer](map/README.md)
 - [HKTWUncycBot](htub/README.md)
 - [IM 群組聊天機器人](im-bot/README.md)
   - [配置指南](im-bot/installation.md)
