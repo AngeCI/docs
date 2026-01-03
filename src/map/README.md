@@ -24,6 +24,8 @@ https://angeci.github.io/map/?<queries>
 - `hk1980`: HK1980 grid coordinates.
 - `twd67`: TWD67 grid coordinates.
 - `twd97`: TWD97 grid coordinates.
+- `ll`: WGS84 coordinates.
+- `z`: Zoom level.
 
 ### UTM coordinates
 Format: UTM zone + easting + northing
@@ -32,7 +34,7 @@ https://angeci.github.io/map/?utm=50Q+209108+2485039
 ```
 
 ### MGRS coordinates
-- 100000 km grid:
+- 100 km grid:
 ```
 https://angeci.github.io/map/?mgrs=51QTF
 ```
@@ -52,7 +54,14 @@ https://angeci.github.io/map/?plus=MM89+6V
 ```
 - Local Plus Code, with locality specified:
 ```
+https://angeci.github.io/map/?plus=MM89+6V+Tokyo,+Japan
 https://angeci.github.io/map/?plus=MM89+6V+JP-13
+```
+Padded Plus Code:
+```
+https://angeci.github.io/map/?plus=9C000000+
+https://angeci.github.io/map/?plus=7PXM0000+
+https://angeci.github.io/map/?plus=8Q6QC600+
 ```
 
 ### Maidenhead Locator System
@@ -78,16 +87,22 @@ https://angeci.github.io/map/?hk1980=823764,837329
 ```
 
 ### TWD67 grid coordinates
+Easting first, then northing.
 ```
 https://angeci.github.io/map/?twd67=317321,2785079
 ```
 
 ### TWD97 grid coordinates
+Easting first, then northing.
 ```
 https://angeci.github.io/map/?twd97=318149,2784873
 ```
 
 ### Direct GPS coordinate (WGS84) specification
+Latitude first, then longitude.
 ```
+https://angeci.github.io/map/?ll=39.90647,116.39125
+https://angeci.github.io/map/?ll=39d54m23.3s,116d23m28.5s
 https://angeci.github.io/map/#39.90647,116.39125
+https://angeci.github.io/map/#39d54m23.3s,116d23m28.5s
 ```

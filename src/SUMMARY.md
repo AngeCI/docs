@@ -4,6 +4,8 @@
 
 # Projects
 - [Boardgames](boardgame/README.md)
+  - [Chess](boardgame/chess.md)
+  - [Chinese Chess](boardgame/cchess.md)
 - [Map viewer](map/README.md)
 - [HKTWUncycBot](htub/README.md)
 - [IM 群組聊天機器人](im-bot/README.md)
