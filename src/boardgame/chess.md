@@ -1,6 +1,7 @@
+# Web Chess Board
 ## Position format
 
-Each piece is represented by a hexadecimal digit, then encode the whole number with base64. `converter.html` includes a converter that can convert between FEN format and the custom base64 position format.
+Each piece is represented by a hexadecimal digit, then encode the whole number with base64. This application includes a converter that can convert between FEN format and the custom base64 position format.
 
 | Piece  | White | Black |
 | :----- | :---- | :---- |
@@ -13,7 +14,7 @@ Each piece is represented by a hexadecimal digit, then encode the whole number w
 
 Empty squares are represented by 0.
 
-The starting position encoded into the chess-ani position format is: `vNqdy+7u7u4AAAAAAAAAAAAAAAAAAAAAZmZmZjRSFUM`
+The starting position encoded into the custom base64 position format is: `vNqdy+7u7u4AAAAAAAAAAAAAAAAAAAAAZmZmZjRSFUM`
 
 ## Moves format
 
