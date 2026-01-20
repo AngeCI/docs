@@ -14,7 +14,20 @@ Each piece is represented by a hexadecimal digit, then encode the whole number w
 
 Empty squares are represented by 0.
 
-The starting position encoded into the custom base64 position format is: `vNqdy+7u7u4AAAAAAAAAAAAAAAAAAAAAZmZmZjRSFUM`
+Addtional informations such as castling rights, en passant files and number of turns are encoded after a colon.
+| Bit index | Meaning |
+| -- | -- |
+| 0 | Side to move, 0 for white, 1 for black. |
+| 1 | Black’s long castle |
+| 2 | Black’s short castle |
+| 3 | White’s long castle |
+| 4 | White’s short castle |
+| 5-7 | En passant file, only the file is encoded. 0 for a-file, 7 for h-file. |
+| 8 | En passant availability |
+| 9-14 | Number of turns since the last capture or pawn move. |
+| 15-23+ | Number of turns since the beginning of the entire game. |
+
+The starting position encoded into the custom base64 position format is: `vNqdy+7u7u4AAAAAAAAAAAAAAAAAAAAAZmZmZjRSFUM:eAAA`
 
 ## Moves format
 
